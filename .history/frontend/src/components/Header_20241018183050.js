@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Logo from './Logo';
 import {CiSearch} from 'react-icons/ci';
 import {FaRegCircleUser} from 'react-icons/fa6';
@@ -10,9 +9,7 @@ const Header = () => {
     <header className="h-16 shadow-md bg-white">
       <div className="h-full container mx-auto flex items-center px-4 justify-between">
         <div className="">
-          <Link to="/">
-            <Logo w={90} h={50} />
-          </Link>
+          <Logo w={90} h={50} />
         </div>
 
         <div className="hidden lg:flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow-md pl-2">
@@ -39,12 +36,9 @@ const Header = () => {
           </div>
 
           <div>
-            <Link
-              to="/login"
-              className="px-2 py-1 bg-red-600 rounded-full text-white hover:bg-red-700"
-            >
+            <button className="px-2 py-1 bg-red-600 rounded-full text-white hover:bg-red-700">
               Login
-            </Link>
+            </button>
           </div>
         </div>
       </div>
