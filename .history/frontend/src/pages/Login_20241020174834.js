@@ -22,12 +22,6 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault ();
-  };
-
-  console.log ('Data login: ', data);
-
   return (
     <section id="login">
       <div className="mx-auto-container p-4">
@@ -36,7 +30,7 @@ const Login = () => {
             <img src={loginIcons} alt="login icon" />
           </div>
 
-          <form className="pt-5" onSubmit={handleSubmit}>
+          <form className="pt-5">
             <div className="grid">
               <label>Email: </label>
               <div className="bg-slate-100 p-2">

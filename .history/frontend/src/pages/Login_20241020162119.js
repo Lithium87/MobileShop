@@ -6,27 +6,6 @@ import {FaEyeSlash} from 'react-icons/fa';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState (false);
-  const [data, setData] = useState ({
-    email: '',
-    password: '',
-  });
-
-  const handleOnChange = e => {
-    const {name, value} = e.target;
-
-    setData (prev => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault ();
-  };
-
-  console.log ('Data login: ', data);
 
   return (
     <section id="login">
@@ -36,7 +15,7 @@ const Login = () => {
             <img src={loginIcons} alt="login icon" />
           </div>
 
-          <form className="pt-5" onSubmit={handleSubmit}>
+          <form className="pt-5">
             <div className="grid">
               <label>Email: </label>
               <div className="bg-slate-100 p-2">
@@ -44,9 +23,6 @@ const Login = () => {
                   type="email"
                   placeholder="Enter email"
                   className="w-full -h-full outline-none bg-transparent"
-                  name="email"
-                  value={data.email}
-                  onChange={handleOnChange}
                 />
               </div>
             </div>
@@ -58,9 +34,6 @@ const Login = () => {
                   type={showPassword ? 'text' : 'password'}
                   placeholder="Enter password"
                   className="w-full -h-full outline-none bg-transparent"
-                  name="password"
-                  value={data.password}
-                  onChange={handleOnChange}
                 />
                 <div
                   className="cursor-pointer text-xl"
@@ -75,7 +48,7 @@ const Login = () => {
                 to={'/forgot-password'}
                 className="block w-fit ml-auto hover:underline hover:text-red-600"
               >
-                Forgot password?
+                Forgot password
               </Link>
             </div>
 
@@ -85,14 +58,7 @@ const Login = () => {
           </form>
 
           <p className="my-5">
-            Don't have an account?
-            {' '}
-            <Link
-              to={'/sign-up'}
-              className="text-red-600 hover:text-red-700 hover:underline"
-            >
-              Sign Up
-            </Link>
+            Don't have an account? <Link to={'/sign-up'}>Sign Up</Link>
           </p>
         </div>
       </div>
