@@ -8,7 +8,7 @@ function App () {
   return (
     <React.Fragment>
       <Header />
-      <main className="min-h-[calc(100vh - 130px)]">
+      <main className="min-h-[calc(100vh - 100px)]">
         <Outlet />
       </main>
       <Footer />

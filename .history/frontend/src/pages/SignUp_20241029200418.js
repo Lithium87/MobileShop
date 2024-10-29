@@ -79,7 +79,6 @@ const SignUp = () => {
                   name="name"
                   value={data.name}
                   onChange={handleOnChange}
-                  required
                 />
               </div>
             </div>
@@ -94,7 +93,6 @@ const SignUp = () => {
                   name="email"
                   value={data.email}
                   onChange={handleOnChange}
-                  required
                 />
               </div>
             </div>
@@ -109,7 +107,6 @@ const SignUp = () => {
                   name="password"
                   value={data.password}
                   onChange={handleOnChange}
-                  required
                 />
                 <div
                   className="cursor-pointer text-xl"
@@ -132,7 +129,6 @@ const SignUp = () => {
                   name="confirmPassword"
                   value={data.confirmPassword}
                   onChange={handleOnChange}
-                  required
                 />
                 <div
                   className="cursor-pointer text-xl"
